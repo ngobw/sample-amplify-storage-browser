@@ -13,12 +13,13 @@ export const storage = defineStorage({
         allow.groups(['admin']).to(['read', 'write', 'delete']),
         allow.authenticated.to(['read']),
         allow.entity('identity').to(['read', 'write', 'delete'])
-    ],
-    'test/{entity_id}/*': [
-        allow.groups(['admin']).to(['read', 'write', 'delete']),
-        allow.authenticated.to(['read']),
-        allow.entity('identity').to(['read', 'write', 'delete'])
     ]
+    // ,
+    // 'test/{entity_id}/*': [
+    //     allow.groups(['admin']).to(['read', 'write', 'delete']),
+    //     allow.authenticated.to(['read']),
+    //     allow.entity('identity').to(['read', 'write', 'delete'])
+    // ]
    })
 });
 
